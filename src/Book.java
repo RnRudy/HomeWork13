@@ -2,10 +2,10 @@ import java.util.Objects;
 
 public class Book {
     private String bookName;
-    private String author;
+    private Author author;
     private int yearOfPublishing;
 
-    public Book(String bookName, String author, int yearOfPublishing) {
+    public Book(String bookName, Author author, int yearOfPublishing) {
         this.bookName = bookName;
         this.author = author;
         this.yearOfPublishing = yearOfPublishing;
@@ -15,7 +15,7 @@ public class Book {
         return this.bookName;
     }
 
-    public String getAuthor() {
+    public Author getAuthor() {
         return this.author;
     }
 
@@ -30,14 +30,14 @@ public class Book {
     public boolean equals(Object o) {
         if (this == o) return true;
         if (o == null || getClass() != o.getClass()) return false;
-        Book that = (Book) o;
-        if (yearOfPublishing != that.yearOfPublishing) return false;
-        if (author != author) return false;
-        return bookName.equals(that.bookName);
+        Book book = (Book) o;
+        return yearOfPublishing == book.yearOfPublishing && Objects.equals(bookName, book.bookName) && Objects.equals(author, book.author);
     }
+
     public int hashCode() {
         return Objects.hash(bookName, author, yearOfPublishing);
     }
+
     public String toString() {
         return "Название: " + "\"" + this.bookName + "\"" + "\nАвтор: " + author + "\nГод публикации: " + this.yearOfPublishing + " г.";
     }
