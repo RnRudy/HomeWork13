@@ -1,5 +1,5 @@
-import homework12.Author;
-import homework12.Book;
+import homework13.Author;
+import homework13.Book;
 
 
 public class Main {
