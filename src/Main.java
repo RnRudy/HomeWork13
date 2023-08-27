@@ -5,7 +5,7 @@ public class Main {
 
     public static void main(String[] args) {
         Author author = new Author("Николай ", "Гоголь");
-        Author author1 = new Author("Александр  ", "Дюма");
+        Author author1 = new Author("Александр ", "Дюма");
         Author author2 = new Author("Эрих Мария ", "Ремарк");
         Book book = new Book("Мертвые души", author, 1842);
         Book book1 = new Book("Граф Монте-Кристо", author1, 1844);
